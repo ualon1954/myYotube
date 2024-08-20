@@ -1,0 +1,40 @@
+.hbar {
+  display: flax;
+  flex-direction: row;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 55px;
+  background-color: white;
+  width: 72px;
+  z-index: 200;
+
+}
+
+.hbar-link {
+  height: 74px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home, .music{
+  cursor: pointer;
+}
+
+
+.hbar-link:hover {
+  background-color: rgb(235, 235, 235);
+  
+}
+
+.hbar-link img {
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.hbar-link div {
+  font-size: 12px;
+}
