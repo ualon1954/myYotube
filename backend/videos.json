@@ -107,5 +107,23 @@
         "time": "3:48",
         "profile": "channel-pictures/channel-12.jpg",
         "url": "https://www.youtube.com/watch?v=ffcitRgiNDs"
+      },
+      {
+        "thumbnail": "thumbnails/thumbnail-13.webp",
+        "title": "Still Loving You",
+        "author": "סקורפיונס",
+        "stats": "לועזי",
+        "time": "4:48",
+        "profile": "channel-pictures/channel-13.jpg",
+        "url": "https://www.youtube.com/watch?v=7pOr3dBFAeY"
+      },
+      {
+        "thumbnail": "thumbnails/thumbnail-14.webp",
+        "title": "מי אוהב אותך יותר ממני",
+        "author": "ארקדי דוכין",
+        "stats": "ישראלי",
+        "time": "3:25",
+        "profile": "channel-pictures/channel-14.jpg",
+        "url": "https://www.youtube.com/watch?v=q4wyk6XpfeE"
       }
  ]
