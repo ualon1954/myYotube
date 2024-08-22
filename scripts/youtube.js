@@ -21,7 +21,7 @@ function filterVideo(value) {
     }
   });
 }
-
+/*
 const searchInput = document.querySelector("[data-search]")
 
 searchInput.addEventListener("input", e => {
@@ -31,11 +31,9 @@ searchInput.addEventListener("input", e => {
     const isVisible =
     video.title.toLowerCase().includes(value)
     //video.element.classList.toggle("hide", !isVisible)
-      
-    
-  })
+    })
 })
-
+*/
 
 loadVideos(renderVideosGrid)
 
@@ -106,11 +104,11 @@ document.querySelector('.music').addEventListener('click', () => {
  });
 
  
- document.querySelector('.search-bar').addEventListener('Enter', () => {
-  console.log('enter');
+ //document.querySelector('.search-bar').addEventListener('Enter', () => {
+  //console.log('enter');
    //window.open('https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ/','_blank');
  
- });
+ //});
   
 document.querySelectorAll('.js-thumbnail').forEach((thumbnail) => {
   thumbnail.addEventListener('click', () => {

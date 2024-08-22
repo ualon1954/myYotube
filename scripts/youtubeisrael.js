@@ -109,11 +109,11 @@ document.querySelector('.music').addEventListener('click', () => {
  });
 
  
- document.querySelector('.search-bar').addEventListener('Enter', () => {
-  console.log('enter');
+ //document.querySelector('.search-bar').addEventListener('Enter', () => {
+ // console.log('enter');
    //window.open('https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ/','_blank');
  
- });
+ //});
   
 document.querySelectorAll('.js-thumbnail').forEach((thumbnail) => {
   thumbnail.addEventListener('click', () => {
