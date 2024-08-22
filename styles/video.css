@@ -92,3 +92,6 @@
   bottom: 8px;
   right: 5px;
 }
+.hide {
+  display: none;
+}
