@@ -7,6 +7,8 @@ let videosHTML  = '';
 export function test() {
   alert('test')
 }
+let grid = document.querySelector(".video-grid");
+let filterInput = document.getElementById("filterInput");
 
 //document.getElementById("israel").onclick = function() {renderMyVideos("ישראלי")};
 
@@ -45,7 +47,7 @@ function renderVideosGrid() {
 videos.forEach((video) => {
   if (video.stats === "ישראלי") {
     videosHTML += `
-    <div class="video-preview">
+    <div class="items js-video-preview">
       <div class="thumbnail-row">
         <img class="thumbnail js-thumbnail" data-video-url ="${video.url}" src="${video.thumbnail}">
         <div class="video-time">${video.time}</div>
@@ -127,4 +129,25 @@ document.querySelectorAll('.js-thumbnail').forEach((thumbnail) => {
   });
     //console.log(cart);
   });
+  filterInput.addEventListener('keyup', filterVideos);
+
+  // callback function 
+  function filterVideos(){
+      let filterValue = filterInput.value.toUpperCase();
+      let item = grid.querySelectorAll('.items')
+      console.log(filterValue);
+  
+      for (let i = 0; i < item.length; i++){
+          let title = item[i].querySelector('.video-title');
+          let author = item[i].querySelector('.video-author');
+  
+          if(title.innerHTML.toUpperCase().indexOf(filterValue) > -1
+             || author.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+              item[i].style.display = "initial";
+          }else{
+              item[i].style.display = "none";
+          }
+  
+      }
+  }
 }
