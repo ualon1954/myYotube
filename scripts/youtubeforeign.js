@@ -91,12 +91,12 @@ document.querySelector('.js-video-grid').innerHTML = videosHTML;
 function openTab(url,target) {
   window.open(url);
   }
-
+/*
 document.querySelector('.youtube-logo').addEventListener('click', () => {
   window.open('https://www.youtube.com/','_blank');
 
 });
-
+*/
 
 document.querySelector('.home').addEventListener('click', () => {
  //console.log('home');

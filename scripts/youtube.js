@@ -103,10 +103,12 @@ function openTab(url,target) {
   window.open(url);
   }
 
+/*
 document.querySelector('.youtube-logo').addEventListener('click', () => {
   window.open('https://www.youtube.com/','_blank');
 
 });
+*/
 
 
 document.querySelector('.home').addEventListener('click', () => {
@@ -147,7 +149,7 @@ document.querySelectorAll('.js-thumbnail').forEach((thumbnail) => {
 function filterVideos(){
     let filterValue = filterInput.value.toUpperCase();
     let item = grid.querySelectorAll('.items')
-    console.log(filterValue);
+    console.log('keyup');
 
     for (let i = 0; i < item.length; i++){
         let title = item[i].querySelector('.video-title');
