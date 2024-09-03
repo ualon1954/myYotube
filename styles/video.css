@@ -63,7 +63,9 @@
     font-size: 14px;
   }
 }
-
+[class*="col-"] {
+  width: 100%;
+}
 .video-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
