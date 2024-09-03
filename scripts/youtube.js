@@ -155,7 +155,7 @@ function filterVideos(){
 
         if(title.innerHTML.toUpperCase().indexOf(filterValue) > -1
            || author.innerHTML.toUpperCase().indexOf(filterValue) > -1){
-            item[i].style.display = "initial";
+            item[i].style.display = "block";
         }else{
             item[i].style.display = "none";
         }
