@@ -26,6 +26,12 @@
   border-radius: 50px;
 }
 
+.youtube-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
 .thumbnail-row {
   margin-bottom: 8px;
   position: relative;
