@@ -103,12 +103,12 @@ function openTab(url,target) {
   window.open(url);
   }
 
-/*
+
 document.querySelector('.youtube-logo').addEventListener('click', () => {
   window.open('https://www.youtube.com/','_blank');
 
 });
-*/
+
 
 
 document.querySelector('.home').addEventListener('click', () => {
