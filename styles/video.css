@@ -69,31 +69,54 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 16px;
   row-gap: 16px;
+  grid-template-columns: repeat(8, 1fr);
 }
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
+
+
+@media (max-width: 2000px) {
+  .video-grid {
+    grid-template-columns: repeat(7, 1fr);
   }
 }
 
-@media (max-width: 750px) {
+/* This @media means when the screen width is 1600px or
+   less, we will divide the grid into 6 columns. */
+@media (max-width: 1600px) {
+  .video-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1300px) {
+  .video-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .video-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
   .video-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (min-width: 751px) and (max-width: 999px) {
-  .video-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 1000px) {
-  .video-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-}
 
 .video-time {
   font-size: 12px;
