@@ -40,13 +40,13 @@
   align-items: center;
 }
 .icon:first-child {
- 
+  display: none;
   right: 0;
   display: none;
   background: linear-gradient(90deg, #fff 70%, transparent);
 }
 .icon:last-child {
- 
+  display: none;
   left: 0;
   justify-content: flex-end;
   background: linear-gradient(-90deg, #fff 70%, transparent);
