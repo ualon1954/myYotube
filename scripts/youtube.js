@@ -16,8 +16,47 @@ const menuItems = document.querySelectorAll('a');
 let list = Array(document.querySelectorAll('myDIV'));
 const gallary = document.querySelectorAll('img');
 
-//const div = document.querySelectorAll("myDIV");
-//console.log(divlen);
+//slider
+const tabsBox = document.querySelector(".tabs-box"),
+allTabs = tabsBox.querySelectorAll(".tab"),
+arrowIcons = document.querySelectorAll(".icon i");
+let isDragging = false;
+const handleIcons = (scrollVal) => {
+    let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
+    arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? "none" : "flex";
+    arrowIcons[1].parentElement.style.display = maxScrollableWidth - scrollVal <= 1 ? "none" : "flex";
+}
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        // if clicked icon is left, reduce 350 from tabsBox scrollLeft else add
+        let scrollWidth = tabsBox.scrollLeft += icon.id === "left" ? -340 : 340;
+        handleIcons(scrollWidth);
+    });
+});
+let category = '';
+allTabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabsBox.querySelector(".active").classList.remove("active");
+        tab.classList.add("active");
+        //console.log(tab.innerHTML);
+        category = tab.innerHTML;
+        loadVideos(renderVideosGrid);
+    });
+});
+const dragging = (e) => {
+    if(!isDragging) return;
+    tabsBox.classList.add("dragging");
+    tabsBox.scrollLeft -= e.movementX;
+    handleIcons(tabsBox.scrollLeft)
+}
+const dragStop = () => {
+    isDragging = false;
+    tabsBox.classList.remove("dragging");
+}
+tabsBox.addEventListener("mousedown", () => isDragging = true);
+tabsBox.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+//slider
 
 function reset_menuItems_color()
 {
@@ -63,32 +102,66 @@ loadVideos(renderVideosGrid)
 function renderVideosGrid() {
   let videosHTML = '';
 videos.forEach((video) => {
-    videosHTML += `
-    <div id="myDIV" class="items js-video-preview">
-      <div class="thumbnail-row">
-        <img class="thumbnail js-thumbnail" data-video-url ="${video.url}" src="${video.thumbnail}">
-        <div class="video-time">${video.time}</div>
-      </div>
-      <div class="video-info-grid">
-        <div class="channel-picture">
-          <img class="profile-picture"
-           src="${video.profile}">
+  if (category === "הכל" || category === '') {
+      console.log("הכל");
+      videosHTML += `
+      <div class="items js-video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail js-thumbnail" data-video-url ="${video.url}" src="${video.thumbnail}">
+          <div class="video-time">${video.time}</div>
         </div>
-        <div class="video-info">
-          <p class="video-title">
-            ${video.title}
-          </p>
-          <p class="video-author">
-           ${video.author}
-          </p>
-          <p class="video-stats" data-category=${video.stats}>
-            ${video.stats}
-          </p>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture"
+            src="${video.profile}">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              ${video.title}
+            </p>
+            <p class="video-author">
+            ${video.author}
+            </p>
+            <p class="video-stats">
+              ${video.stats}
+            </p>
+          </div>
         </div>
-      </div>
-  </div>
-  `;
+    </div>
+    `;
+    }
+    else if(video.stats === category) {
+      //console.log("אחר");
+      
+      videosHTML += `
+      <div class="items js-video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail js-thumbnail" data-video-url ="${video.url}" src="${video.thumbnail}">
+          <div class="video-time">${video.time}</div>
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-picture">
+            <img class="profile-picture"
+            src="${video.profile}">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              ${video.title}
+            </p>
+            <p class="video-author">
+            ${video.author}
+            </p>
+            <p class="video-stats">
+              ${video.stats}
+            </p>
+          </div>
+        </div>
+    </div>
+    `;
+    }
   });
+
+  
 
 
 //renderMyVideos("ישראלי");
@@ -164,4 +237,5 @@ function filterVideos(){
 
     }
 }
-}
+  }
+
