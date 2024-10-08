@@ -11,7 +11,7 @@
       },
       {
         "thumbnail": "thumbnails/thumbnail-2.webp",
-        "title": "יסמין מועלם - יוצאת מזה (Live קיסריה)",
+        "title": "יוצאת מזה",
         "author": "יסמין מועלם" ,
         "stats": "ישראלי",
         "time": "3:40",
@@ -20,7 +20,7 @@
       },
       {
         "thumbnail": "thumbnails/thumbnail-3.webp",
-        "title": "Bruce Springsteen - Dancing In the Dark",
+        "title": "Dancing In the Dark",
         "author": "ברוס ספרינגטין" ,
         "stats": "לועזי",
         "time": "3:58",
@@ -251,5 +251,14 @@
         "time": "5:30",
         "profile": "channel-pictures/channel-28.jpg",
         "url": "https://www.youtube.com/watch?v=M8qfRZ5w2qY"
+      },
+      {
+        "thumbnail": "thumbnails/thumbnail-29.webp",
+        "title": "הוריקן",
+        "author": "עדן גולן",
+        "stats": "ישראלי",
+        "time": "3:06",
+        "profile": "channel-pictures/channel-29.jpg",
+        "url": "https://www.youtube.com/watch?v=lJYn09tuPw4"
       }
  ]
