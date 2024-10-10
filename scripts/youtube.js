@@ -23,16 +23,13 @@ arrowIcons = document.querySelectorAll(".icon i");
 let isDragging = false;
 const handleIcons = (scrollVal) => {
     let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
-   //arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? "none" : "flex";
-   // arrowIcons[1].parentElement.style.display = maxScrollableWidth - scrollVal <= 1 ? "none" : "flex";
-   arrowIcons[1].parentElement.style.display = "none";
-   arrowIcons[0].parentElement.style.display =  "none";
+    arrowIcons[0].parentElement.style.display = scrollVal <= 0 ? "none" : "flex";
+    arrowIcons[1].parentElement.style.display = maxScrollableWidth - scrollVal <= 1 ? "none" : "flex";
 }
 arrowIcons.forEach(icon => {
     icon.addEventListener("click", () => {
         // if clicked icon is left, reduce 350 from tabsBox scrollLeft else add
-        //let scrollWidth = tabsBox.scrollLeft += icon.id === "left" ? -340 : 340;
-        let scrollWidth = tabsBox.scrollLeft += icon.id === "right" ? 340 :-340;
+        let scrollWidth = tabsBox.scrollLeft += icon.id === "left" ? -340 : 340;
         handleIcons(scrollWidth);
     });
 });
