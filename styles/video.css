@@ -128,6 +128,24 @@
     width: 180px;
   }
 }
+@media (max-width: 575px) {
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  .middle-section input {
+    width: 150px;
+  }
+}
+@media (max-width: 450px) {
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  .middle-section input {
+    width: 150px;
+  }
+}
 /*
 @media (max-width: 900px) {
   .video-grid {
