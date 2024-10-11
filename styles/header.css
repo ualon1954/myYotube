@@ -50,7 +50,7 @@
 */
 .middle-section {
   flex: 1;
-  max-width: 50px;
+  max-width: 500px;
   margin-left: 10px;
   margin-right: 10px;
   display: flex;
@@ -60,9 +60,9 @@
 
 
 .search-bar {
-  margin-top: 5px;
+  margin-top: 11px;
   flex: 1;
-  height: 36px;
+  height: 30px;
   padding-left: 10px;
   font-size: 16px;
   border: 1px solid rgb(192, 192, 192);

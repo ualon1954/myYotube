@@ -77,6 +77,9 @@
   .video-grid {
     grid-template-columns: repeat(5, 1fr);
   }
+  .middle-section input {
+    width: 350px;
+  }
 }
 
 /* This @media means when the screen width is 1600px or
@@ -85,17 +88,26 @@
   .video-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+  .middle-section input {
+    width: 350px;
+  }
 }
 
 @media (max-width: 1300px) {
   .video-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .middle-section input {
+    width: 350px;
+  }
 }
 
 @media (max-width: 1200px) {
   .video-grid {
     grid-template-columns: repeat(2, 2fr);
+  }
+  .middle-section input {
+    width: 300px;
   }
 }
 
