@@ -1,103 +1,101 @@
-/* Import Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+:root {
+  --primary: #262c56;
+  --secondary: #32396b; 
 }
-/*
-.body {
-  display: flex;
-  padding: 0 10px;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #5372F0;
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
 }
-*/
-.wrapper {
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  
-    position: fixed;
-    margin-bottom: 3px;
-    top: 55px;
-    left: 0px;
-    right: 25px;
-    z-index: 100;
-    direction: rtl;
-    background-color: whitesmoke;
+
+.slider {
+   top:50px;
+   right: 35px;
+   left: 35px;
+   position: fixed;
+   
+   background-color: var(--primary);
+   color: #fff;
+   padding: 1rem;
+   border-radius: .6rem;
+   overflow: hidden;
+   z-index: 100;  
 }
-.wrapper .icon {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 120px;
-  display: flex;
-  align-items: center;
+
+.slider .tabs {
+   min-height: 99%;
+   list-style: none;
+   display: flex;
+   gap: .8rem;
+   overflow-x: auto;
+   scroll-behavior: smooth;
 }
-.icon:first-child {
-  display: none;
+
+.slider .tabs::-webkit-scrollbar {
+ display: none;
+}
+
+.slider .icon {
+   position: absolute;
+   top:50%;
+   transform: translateY(-50%);
+   width: 6rem;
+   height: 100%;
+   padding: .5rem;
+
+   display: flex;
+   align-items: center;
+}
+.slider .icon.hide {
+   display: none;
+}
+
+
+.slider .icon:first-child {
   right: 0;
-  display: none;
-  background: linear-gradient(90deg, #fff 70%, transparent);
+  background: linear-gradient(to left, var(--primary) 45%, transparent);
 }
-.icon:last-child {
-  display: none;
+.slider .icon:last-child {
+  justify-content: flex-end; 
   left: 0;
-  justify-content: flex-end;
-  background: linear-gradient(-90deg, #fff 70%, transparent);
+  background: linear-gradient(to right, var(--primary) 45%, transparent);
+   
 }
-.icon i {
-  width: 55px;
-  height: 55px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  text-align: center;
-  line-height: 55px;
-  border-radius: 50%;
+
+.icon .left-arrow,
+.icon .right-arrow {
+   display:inline-block;
+   width: 2.4rem;
+   height: 2.4rem;
+   border-radius: 50%;
+ 
+   text-align: center;
+   font: 200 2rem / 2.4rem "poppins", sans-serif;
 }
-.icon i:hover {
-  background: #efedfb;
+
+.icon span:hover {
+   background-color: #fff2;
+   cursor: pointer;
+
 }
-.icon:first-child i {
-  margin-left: 15px;
-} 
-.icon:last-child i {
-  margin-right: 15px;
-} 
-.wrapper .tabs-box {
-  display: flex;
-  gap: 12px;
-  list-style: none;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+
+
+.tabs .tab {
+   white-space: nowrap;
+   background-color: var(--secondary);
+   padding: .5rem 1rem;
+   font-size: 1rem;
+   border-radius: 1.3rem;
+   transition: .2s ease-in-out;
 }
-.tabs-box.dragging {
-  scroll-behavior: auto;
-  cursor: grab;
+.tabs .tab:hover {
+   background-color: #fff2;
+   cursor: pointer;
 }
-.tabs-box .tab {
-  cursor: pointer;
-  font-size: 1rem;
-  white-space: nowrap;
-  background: #f5f4fd;
-  padding: 3px 8px;
-  border-radius: 30px;
-  border: 1px solid #d8d5f2;
-}
-.tabs-box .tab:hover{
-  background: #efedfb;
-}
-.tabs-box.dragging .tab {
-  user-select: none;
-  pointer-events: none;
-}
-.tabs-box .tab.active{
-  color: #fff;
-  background: #5372F0;
-  border-color: transparent;
+.tabs .tab.active {
+   background-color: whitesmoke;
+   color: #111;
+
 }
