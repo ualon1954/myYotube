@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/slider.css">
     <link rel="stylesheet" href="styles/buttons.css">
-    <!--script src="scripts/slider.js" defer></script-->
+    <script src="scripts/slider.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -65,16 +65,22 @@
     </header>
     
     
-    <div class="wrapper" dir="rtl">
-      <div class="icon"><i id="left" class="fa-solid fa-angle-left"></i></div>
-      <ul class="tabs-box">
-        <li class="tab active">הכל</li>
-        <li class="tab">ישראלי</li>
-        <li class="tab">לועזי</li>
-        <li class="tab">גיאורגי</li>
-      </ul>
-      <div class="icon"><i id="right" class="fa-solid fa-angle-right"></i></div>
-    </div>
+    <div class="slider">
+      <div class="icon hide">
+         <span class="left-arrow">&lt;</span>
+      </div> 
+      <ul class="tabs">
+         <li class="tab active">הכל</li>
+         <li class="tab">ישראלי</li>
+         <li class="tab">לועזי</li>
+         <li class="tab">גיאורגי</li>
+         <li class="tab">יווני</li>
+         <li class="tab">איטלקי</li>
+       </ul> 
+      <div class="icon">
+         <span class="right-arrow">&gt;</span>
+      </div> 
+     </div>   
 
     
       <nav class="sidebar">
