@@ -17,8 +17,8 @@ let list = Array(document.querySelectorAll('myDIV'));
 const gallary = document.querySelectorAll('img');
 
 //slider
-const tabsBox = document.querySelector(".tabs-box"),
-allTabs = tabsBox.querySelectorAll(".tab"),
+const tabs = document.querySelector(".tabs"),
+allTabs = tabs.querySelectorAll(".tab"),
 arrowIcons = document.querySelectorAll(".icon i");
 let isDragging = false;
 const handleIcons = (scrollVal) => {
@@ -36,7 +36,7 @@ arrowIcons.forEach(icon => {
 let category = '';
 allTabs.forEach(tab => {
       tab.addEventListener("click", () => {
-        tabsBox.querySelector(".active").classList.remove("active");
+        tabs.querySelector(".active").classList.remove("active");
         tab.classList.add("active");
         //console.log(tab.innerHTML);
         category = tab.innerHTML;
@@ -53,8 +53,8 @@ const dragStop = () => {
     isDragging = false;
     tabsBox.classList.remove("dragging");
 }
-tabsBox.addEventListener("mousedown", () => isDragging = true);
-tabsBox.addEventListener("mousemove", dragging);
+tabs.addEventListener("mousedown", () => isDragging = true);
+tabs.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 //slider
 
@@ -238,4 +238,3 @@ function filterVideos(){
     }
 }
   }
-
