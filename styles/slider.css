@@ -11,14 +11,15 @@
 }
 
 .slider {
-   top:50px;
+   top:55px;
    right: 35px;
    left: 35px;
    position: fixed;
    
-   background-color: var(--primary);
+   /* background-color: var(--primary); */
+   background-color: rgb(248, 248, 248);
    color: #fff;
-   padding: 1rem;
+   padding: 0.5rem;
    border-radius: .6rem;
    overflow: hidden;
    z-index: 100;  
@@ -28,7 +29,7 @@
    min-height: 99%;
    list-style: none;
    display: flex;
-   gap: .8rem;
+   gap: .5rem;
    overflow-x: auto;
    scroll-behavior: smooth;
 }
@@ -84,18 +85,21 @@
 
 .tabs .tab {
    white-space: nowrap;
-   background-color: var(--secondary);
+   /* background-color: var(--secondary); */
+   color: #111;
    padding: .5rem 1rem;
    font-size: 1rem;
    border-radius: 1.3rem;
    transition: .2s ease-in-out;
 }
 .tabs .tab:hover {
-   background-color: #fff2;
+   background-color: rgb(197, 200, 202);
+   /* background-color: #fff2; */
    cursor: pointer;
 }
 .tabs .tab.active {
    background-color: whitesmoke;
-   color: #111;
+   color: white;
+   background-color: #111;
 
 }
