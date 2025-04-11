@@ -103,6 +103,6 @@
 .tabs .tab.active {
    background-color: whitesmoke;
    color: white;
-   background-color: #111;
+   background-color: rgb(61, 60, 60)
 
 }

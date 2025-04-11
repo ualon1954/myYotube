@@ -13,7 +13,8 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
-  
+  color: rgb(121, 115, 239);
+   
 }
 
 .video-info-grid {
@@ -127,6 +128,7 @@
   .middle-section input {
     width: 180px;
   }
+  
 }
 @media screen and (max-width: 575px) {
   .video-grid {
@@ -136,6 +138,7 @@
   .middle-section input {
     width: 180px;
   }
+  
 }
 @media screen and (max-width: 480px) {
   .video-grid {
@@ -145,7 +148,9 @@
   .middle-section input {
     width: 150px;
   }
-}
+  }
+
+  
 /*
 @media (max-width: 900px) {
   .video-grid {
