@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mytube</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/video.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/buttons.css">
+    <script src="scripts/slider.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-section">
+        <!--img class="hamburger-menu" src="icons/hamburger-menu.svg"-->
+        <!--img class="youtube-logo" styl="display:none" src="icons/youtube-logo1.svg"-->
+        <img class="current-user-picture" src="channel-pictures/uzichannel.jpg">
+        <img class="youtube-logo" src="icons/youtube-logo1.png">
+        <button class="nav-button theme-button">
+                       <i class="uil uil-moon"></i>  
+        </button>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg> -->
+      </div>
+      <div class="middle-section">
+        <form>
+          <input type="search" class="search-bar" name="gsearch" id="filterInput" placeholder="חיפוש">        
+        </form>
+      </div>
+      
+      <!--div class="middle-section">
+        <input class="search-bar" type="text" placeholder="חיפוש">
+        <input class="search-bar" type="search" id="search-icon" data-search placeholder="חיפוש">
+
+        <button class="search-button">
+          <img class="search-icon" src="icons/search.svg">
+          <div class="tooltip">חיפוש</div>
+        </button>
+        < Put position absolute inside position relative >
+        <button class="voice-search-button">
+          <img class="voice-search-icon" src="icons/voice-search-icon.svg">
+          <div class="tooltip">Search with your voice</div>
+        </button-->
+      </div-->
+      <div class="right-section">
+        <!--div class="upload-icon-container">
+          <img class="upload-icon" src="icons/upload.svg">
+          <div class="tooltip">Create</div>
+        </div-->
+        <!--div class="youtube-apps-icon-container">
+          <img class="youtube-apps-icon" src="icons/youtube-apps.svg">
+          <div class="tooltip">YouTube Apps</div>
+        </div-->
+        <!--div class="notifications-icon-container">
+          <img class="notifications-icon" src="icons/notifications.svg">
+          <div class="notifications-count">3</div>
+          <div class="tooltip">Notifications</div>
+        </div-->
+        <!--img class="current-user-picture" src="channel-pictures/uzichannel.jpg"-->
+      </div>
+      
+    </header>
+    
+    
+    <div class="slider">
+      <!-- <div class="icon hide">
+         <span class="left-arrow">&lt;</span>
+      </div>  -->
+      <ul class="tabs">
+         <li class="tab active">הכל</li>
+         <li class="tab">ישראלי</li>
+         <li class="tab">לועזי</li>
+         <li class="tab">גיאורגי</li>
+         <li class="tab">יווני</li>
+         <li class="tab">איטלקי</li>
+       </ul> 
+      <!-- <div class="icon">
+         <span class="right-arrow">&gt;</span>
+      </div>  -->
+     </div>   
+
+    
+      <nav class="sidebar">
+      <div class="sidebar-link">
+        <img class ="home" src="icons/home.svg">
+        <div><a href="index.html">בית</a></div>
+      </div>
+      <div class="sidebar-link">
+        <img src="icons/explore.svg">
+        <div>Explore</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="icons/subscriptions.svg">
+        <div>Subscriptions</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="icons/originals.svg">
+        <div>Originals</div>
+      </div>
+      <div class="sidebar-link">
+        <img class ="music" src="icons/youtube-music.svg">
+        <div>מוזיקה</div>
+      </div>
+      <div class="sidebar-link">
+        <img src="icons/library.svg">
+        <div>Library</div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="video-grid js-video-grid">
+      </div>
+    </main>
+    <script type="module" src="scripts/youtube.js"></script>
+   
+  </body>
+</html>
