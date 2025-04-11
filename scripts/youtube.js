@@ -11,6 +11,27 @@ export function test() {
 let grid = document.querySelector(".video-grid");
 let filterInput = document.getElementById("filterInput");
 
+const themeButton = document.querySelector(".theme-button i");
+// initalize dark mode based on localStorage
+if(localStorage.getItem("darkMode") === "enabled") {
+  document.body .classList.add("dark-mode"); 
+  themeButton.classList.replace("uil-moon", "uil-sun");
+} else {
+  themeButton.classList.replace("uil-sun", "uil-moon");
+}
+
+// Toggle dark mode when button is clicked
+themeButton.addEventListener("click", () => {
+  const isDarkModeBody =  document.body.classList.toggle("dark-mode");
+  const isDarkModeHeader =  document.querySelector(".header").classList.toggle("dark-mode");
+  const isDarkModeSlider =  document.querySelector(".slider").classList.toggle("dark-mode");
+  // const isDarkModeTilte =  document.querySelectorAll(".video-title").classList.toggle("dark-mode");
+  // const isDarkMode = document.body.classList.toggle("dark-mode");
+  localStorage.setItem("darkMode", isDarkModeBody ? "enabled" : "disabled");
+  themeButton.classList.toggle("uil-sun", isDarkModeBody && isDarkModeHeader && isDarkModeSlider);
+  themeButton.classList.toggle("uil-moon", !isDarkModeBody && !isDarkModeHeader && !isDarkModeSlider);
+});
+
 //document.getElementById("israel").onclick = function() {renderMyVideos("ישראלי")};
 const menuItems = document.querySelectorAll('a');
 let list = Array(document.querySelectorAll('myDIV'));
@@ -45,13 +66,13 @@ allTabs.forEach(tab => {
 });
 const dragging = (e) => {
     if(!isDragging) return;
-    tabsBox.classList.add("dragging");
-    tabsBox.scrollLeft -= e.movementX;
-    handleIcons(tabsBox.scrollLeft)
+    tabs.classList.add("dragging");
+    tabs.scrollLeft -= e.movementX;
+    handleIcons(tabs.scrollLeft)
 }
 const dragStop = () => {
     isDragging = false;
-    tabsBox.classList.remove("dragging");
+    tabs.classList.remove("dragging");
 }
 tabs.addEventListener("mousedown", () => isDragging = true);
 tabs.addEventListener("mousemove", dragging);
