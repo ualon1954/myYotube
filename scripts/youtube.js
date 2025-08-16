@@ -132,10 +132,7 @@ videos.forEach((video) => {
           <div class="video-time">${video.time}</div>
         </div>
         <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture"
-            src="${video.profile}">
-          </div>
+          
           <div class="video-info">
             <p class="video-title">
               ${video.title}
@@ -161,10 +158,7 @@ videos.forEach((video) => {
           <div class="video-time">${video.time}</div>
         </div>
         <div class="video-info-grid">
-          <div class="channel-picture">
-            <img class="profile-picture"
-            src="${video.profile}">
-          </div>
+         
           <div class="video-info">
             <p class="video-title">
               ${video.title}
