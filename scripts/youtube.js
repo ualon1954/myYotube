@@ -248,9 +248,10 @@ function filterVideos(){
     for (let i = 0; i < item.length; i++){
         let title = item[i].querySelector('.video-title');
         let author = item[i].querySelector('.video-author');
-        let time = item[i].querySelector('.video-time');
+        let year = item[i].querySelector('.video-time');
         if(title.innerHTML.toUpperCase().indexOf(filterValue) > -1
-           || author.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+           || author.innerHTML.toUpperCase().indexOf(filterValue) > -1
+           || year.innerHTML.toUpperCase().indexOf(filterValue) > -1){
             item[i].style.display = "block";
         }else{
             item[i].style.display = "none";
