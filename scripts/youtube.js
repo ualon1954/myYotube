@@ -198,10 +198,10 @@ function openTab(url,target) {
   }
 
 
-document.querySelector('.youtube-logo').addEventListener('click', () => {
-  window.open('https://www.youtube.com/','_blank');
+// document.querySelector('.youtube-logo').addEventListener('click', () => {
+//   window.open('https://www.youtube.com/','_blank');
 
-});
+// });
 
 
 
@@ -211,11 +211,11 @@ document.querySelector('.home').addEventListener('click', () => {
 
 });
 
-document.querySelector('.music').addEventListener('click', () => {
-  //console.log('home');
-   window.open('https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ/','_blank');
+// document.querySelector('.music').addEventListener('click', () => {
+//   //console.log('home');
+//    window.open('https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ/','_blank');
  
- });
+//  });
 
  
  //document.querySelector('.search-bar').addEventListener('Enter', () => {
@@ -224,18 +224,18 @@ document.querySelector('.music').addEventListener('click', () => {
  
  //});
   
-document.querySelectorAll('.js-thumbnail').forEach((thumbnail) => {
-  thumbnail.addEventListener('click', () => {
-    console.log("hello");
-    const videoUrl = thumbnail.dataset.videoUrl;
-    //addToCart(productId);
-    //updateCartQuantity()
-    openTab(videoUrl,'_blank');
+// document.querySelectorAll('.js-thumbnail').forEach((thumbnail) => {
+//   thumbnail.addEventListener('click', () => {
+//     console.log("hello");
+//     const videoUrl = thumbnail.dataset.videoUrl;
+//     //addToCart(productId);
+//     //updateCartQuantity()
+//     openTab(videoUrl,'_blank');
       
-   //console.log(videoUrl);
-  });
-    //console.log(cart);
-  });
+//    //console.log(videoUrl);
+//   });
+//     //console.log(cart);
+//   });
 
  filterInput.addEventListener('keyup', filterVideos);
 
@@ -248,7 +248,7 @@ function filterVideos(){
     for (let i = 0; i < item.length; i++){
         let title = item[i].querySelector('.video-title');
         let author = item[i].querySelector('.video-author');
-
+        let time = item[i].querySelector('.video-time');
         if(title.innerHTML.toUpperCase().indexOf(filterValue) > -1
            || author.innerHTML.toUpperCase().indexOf(filterValue) > -1){
             item[i].style.display = "block";
