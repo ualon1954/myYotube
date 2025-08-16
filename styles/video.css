@@ -18,14 +18,15 @@
 }
 
 .video-info-grid {
-  display: grid;
+  display: block;
+  margin-right: 5px;
   grid-template-columns: 50px 1fr;
 }
 
 .profile-picture {
   /* width: 50px;
   border-radius: 50px; */
-  display:none;
+  /* display:none; */
 }
 
 .thumbnail-row {
