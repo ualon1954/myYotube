@@ -181,8 +181,9 @@
 
 .current-user-picture {
   margin: 15px;
-  height: 32px;
-  border-radius: 16px;
+  height: 25px;
+  width: 35px;
+  border-radius: 50%;
 }
 
 .search-button,

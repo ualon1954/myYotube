@@ -1,6 +1,6 @@
 .thumbnail {
   width: 100%;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .thumbnail:hover{
@@ -23,8 +23,9 @@
 }
 
 .profile-picture {
-  width: 36px;
-  border-radius: 50px;
+  /* width: 50px;
+  border-radius: 50px; */
+  display:none;
 }
 
 .thumbnail-row {
@@ -44,6 +45,7 @@
 
 .video-author {
   margin-bottom: 4px;
+  margin-left: 2px;
   font-family: arial;
   color: red;
 }
@@ -181,7 +183,7 @@
   position: absolute;
   bottom: 8px;
   right: 5px;
-}
+ }
 
 .video-preview {
   display: block;
