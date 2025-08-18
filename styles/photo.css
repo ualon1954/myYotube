@@ -1,0 +1,207 @@
+.thumbnail {
+  width: 100%;
+  /* cursor: pointer; */
+}
+
+.thumbnail:hover{
+  scale:  1.04;
+  
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgb(121, 115, 239);
+   
+}
+
+.video-info-grid {
+  display: block;
+  margin-right: 5px;
+  grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+  /* width: 50px;
+  border-radius: 50px; */
+  /* display:none; */
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-author,
+.video-stats {
+  font-size: 14px;
+  color: rgb(96, 96, 96);
+}
+
+.video-stats {
+  display:none;
+  }
+
+.video-author {
+  margin-bottom: 4px;
+  margin-left: 2px;
+  font-family: arial;
+  color: red;
+}
+
+@media (min-width: 1000px) {
+  .video-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    font-family: miriam;
+   
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-author,
+  .video-stats {
+    font-size: 14px;
+  }
+}
+
+.video-grid {
+  display: grid;
+  /*grid-template-columns: 1fr 1fr; */
+  column-gap: 16px;
+  row-gap: 16px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+@media screen and (max-width: 3000px) {
+  .video-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .middle-section input {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .video-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .middle-section input {
+    width: 350px;
+  }
+}
+
+/* This @media means when the screen width is 1600px or
+   less, we will divide the grid into 6 columns. */
+@media screen and (max-width: 1600px) {
+  .video-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .middle-section input {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .middle-section input {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .middle-section input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  .middle-section input {
+    width: 180px;
+  }
+  
+}
+@media screen and (max-width: 575px) {
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  .middle-section input {
+    width: 180px;
+  }
+  
+}
+@media screen and (max-width: 480px) {
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+  .middle-section input {
+    width: 150px;
+  }
+  }
+
+  
+/*
+@media (max-width: 900px) {
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .video-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+*/
+
+.video-time {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+ }
+
+.video-preview {
+  display: block;
+}
+
+div.show {
+  display: none;
+  animation: animate 0.5s;
+}
+div.hide {
+  display: none;
+}
+
+@keyframes animate {   
+   0%{
+      transform: scale(0);
+   }100%{
+    transform: scale(1);
+   }   
+}

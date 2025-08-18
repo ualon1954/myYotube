@@ -256,14 +256,14 @@ header ul li.active a{
 }
 
 .export__file .export__file-btn {
-  margin-top: 3px;
-    margin-right: 20px;
+    margin-top: 3px;
+    margin-left: 20px;
     align-items: center;
     justify-items: center;
     display: inline-block;
     width: 2rem;
     height: 2rem;
-    background: #fff6 url(/images/heb.jpg) center / 90% no-repeat;
+    background: #fff6 url(/images/eng.jpg) center / 80% no-repeat;
     border-radius: 50%;
     transition: .2s ease-in-out;
 }
@@ -280,7 +280,7 @@ header ul li.active a{
 
 .export__file .export__file-options {
     position: absolute;
-    right: 0;
+    left: 0;
     
     width: 12rem;
     border-radius: .5rem;
@@ -290,7 +290,7 @@ header ul li.active a{
 
     opacity: 0;
     transform: scale(.8);
-    transform-origin: top right;
+    transform-origin: top left;
     
     box-shadow: 0 .2rem .5rem #0004;
     
@@ -300,7 +300,7 @@ header ul li.active a{
 .export__file input:checked + .export__file-options {
     opacity: 1;
     margin-top: 58px;
-    margin-right: 20px;
+    margin-left: 0px;
     transform: scale(1);
     z-index: 100;
 }
@@ -316,7 +316,7 @@ header ul li.active a{
     display: flex;
     justify-content: space-around;
     align-items:first baseline;
-    text-align: right;
+    text-align: left;
 
     transition: .2s ease-in-out;
 }
