@@ -1,0 +1,45 @@
+[
+  {
+      "thumbnail": "thumbnails/אריאה2.jpg",
+      "title": "Little model",
+      "author": "Aria" ,
+      "stats": "Aria",
+      "time": "2024"
+    },
+    {
+      "thumbnail": "thumbnails/אריאה.jpg",
+      "title": "3rd birthday",
+      "author": "Aria" ,
+      "stats": "Aria",
+      "time": "2025"
+    },
+    {
+      "thumbnail": "thumbnails/אריאה1.jpg",
+      "title": "3rd birthday",
+      "author": "Aria",
+      "stats": "Aria",
+      "time": "2025"
+    },
+    {
+      "thumbnail": "thumbnails/יהונתן1.jpg",
+      "title": "Circumcision",
+      "author": "Jonathan",
+      "stats": "Jonathan",
+      "time": "2025"
+    },
+    {
+      "thumbnail": "thumbnails/יוהנתן2.jpg",
+      "title": "One month old with his sister Aria",
+      "author": "Aria ws Jonathan",
+      "stats": "Common",
+      "time": "2025"
+    },
+    {
+      "thumbnail": "thumbnails/יהונתן3.jpg",
+      "title": "Two months old",
+      "author": "Jonathan",
+      "stats": "Jonathan",
+      "time": "2025"
+    }
+
+ ]

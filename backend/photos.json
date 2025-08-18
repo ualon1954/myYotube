@@ -1,0 +1,45 @@
+[
+  {
+      "thumbnail": "thumbnails/אריאה2.jpg",
+      "title": "דוגמנית קטנה",
+      "author": "אריאה" ,
+      "stats": "אריאה",
+      "time": "2024"
+    },
+    {
+      "thumbnail": "thumbnails/אריאה.jpg",
+      "title": "יום הולדת ה 3",
+      "author": "אריאה" ,
+      "stats": "אריאה",
+      "time": "2025"
+    },
+    {
+      "thumbnail": "thumbnails/אריאה1.jpg",
+      "title": "יום הולדת ה 3",
+      "author": "אריאה",
+      "stats": "אריאה",
+      "time": "2025"
+    },
+    {
+      "thumbnail": "thumbnails/יהונתן1.jpg",
+      "title": "ברית מילה",
+      "author": "יהונתן",
+      "stats": "יהונתן",
+      "time": "2025"
+    },
+    {
+      "thumbnail": "thumbnails/יוהנתן2.jpg",
+      "title": "בן חודש עם אחותו אריאה",
+      "author": "אריאה ויהונתן",
+      "stats": "משותף",
+      "time": "2025"
+    },
+    {
+      "thumbnail": "thumbnails/יהונתן3.jpg",
+      "title": "בן חודשיים",
+      "author": "יהונתן",
+      "stats": "יהונתן",
+      "time": "2025"
+    }
+
+ ]
